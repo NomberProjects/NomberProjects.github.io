@@ -1,102 +1,109 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #0d0d0f;
-            color: #f5f5f5;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 24px;
-        }
-
-        .container {
-            max-width: 520px;
-        }
-
-        .logo {
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 60px;
-            color: #888;
-        }
-
-        h1 {
-            font-size: clamp(36px, 8vw, 58px);
-            letter-spacing: -2px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: #888;
-            font-size: 16px;
-            line-height: 1.7;
-        }
-
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 32px;
-            padding: 10px 16px;
-            border: 1px solid #29292e;
-            border-radius: 30px;
-            color: #aaa;
-            font-size: 12px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: #4c3cff;
-            box-shadow: 0 0 10px #4c3cff;
-        }
-
-        footer {
-            position: absolute;
-            bottom: 28px;
-            color: #444;
-            font-size: 12px;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NOMBER — NomberProjects · Автор, разработчик, создатель экосистем</title>
+<meta name="description" content="NomberProjects — хаб всех проектов NOMBER: DownGrab, KotoClicker, плагины для Obsidian, сообщество Критики Steam и проекты в разработке.">
+<link rel="canonical" href="https://nomberprojects.github.io/">
+<meta name="theme-color" content="#05050a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NomberProjects">
+<meta property="og:title" content="NOMBER — NomberProjects">
+<meta property="og:description" content="Автор · Разработчик · Создатель экосистем. Хаб всех проектов NOMBER.">
+<meta property="og:url" content="https://nomberprojects.github.io/">
+<meta property="og:image" content="https://nomberprojects.github.io/assets/og.jpg">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/downgrab-256.jpg">
+<link rel="preload" href="assets/hero.webp" as="image">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/i18n.js"></script>
 </head>
 <body>
-    <main class="container">
-        <div class="logo">Nomber Projects</div>
+<a class="skip" href="#projects" data-i18n="skip">Перейти к проектам</a>
+<div class="bg" aria-hidden="true"><div class="bg-city" data-depth="6"></div><canvas id="fx"></canvas></div>
+<div class="cursor-glow" aria-hidden="true"></div>
 
-        <h1>Something is<br>in the works.</h1>
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="NomberProjects — наверх" data-i18n-attr="aria-label:a.top"><img src="assets/favicon.svg" alt="" width="28" height="28"><span>Nomber<b>Projects</b></span></a>
+  <nav aria-label="Разделы" data-i18n-attr="aria-label:a.sections">
+    <a href="#projects" data-i18n="nav.projects">Проекты</a><a href="#wip" data-i18n="nav.wip">В разработке</a><a href="#community" data-i18n="nav.com">Сообщества</a><a href="#archive" data-i18n="nav.arc">Архив</a><a href="#contact" data-i18n="nav.contact">Связь</a>
+  </nav>
+  <a class="nav-donate" href="https://donatre.github.io/" target="_blank" rel="noopener">♥ <span data-i18n="donate">Поддержать</span></a>
+  <div class="lang" role="group" aria-label="Язык сайта" data-i18n-attr="aria-label:a.lang"><button type="button" data-lang="ru">RU</button><i>|</i><button type="button" data-lang="en">EN</button></div>
+</header>
 
-        <p>
-            We're building something new.
-            This website is currently under development.
-            Stay tuned for updates.
-        </p>
+<main id="top">
+  <section class="hero" id="projects" aria-labelledby="title">
+    <div class="hero-head reveal">
+      <p class="kicker" data-i18n="hero.kicker">// nomberprojects.github.io — хаб экосистемы</p>
+      <h1 id="title" class="glitch" data-text="NOMBER">NOMBER</h1>
+      <p class="subtitle" data-i18n="hero.sub">Автор · Разработчик · Создатель экосистем</p>
+    </div>
 
-        <div class="status">
-            <span class="dot"></span>
-            Under Development
-        </div>
-    </main>
+    <div class="stage">
+      <div class="fog fog-back" aria-hidden="true"><i></i><i></i></div>
+      <div class="halo" aria-hidden="true"></div>
+      <div class="mascot" data-depth="-14">
+        <img src="assets/hero.webp" alt="Персонаж NOMBER: синий пушистый детектив в шляпе и костюме, загадочно разводит руками" data-i18n-attr="alt:hero.alt" width="1400" height="780">
+      </div>
+      <div class="fog fog-front" aria-hidden="true"><i></i><i></i></div>
 
-    <footer>© 2026 Nomber Projects</footer>
+      <div class="col col-left" id="col-left"></div>
+      <div class="col col-right" id="col-right"></div>
+    </div>
+    <div class="col-bottom" id="col-bottom"></div>
+    <a class="scroll-hint" href="#wip" aria-label="Листать ниже" data-i18n-attr="aria-label:a.scroll"><span></span></a>
+  </section>
+
+  <section class="section" id="wip" aria-labelledby="wip-t">
+    <header class="sec-head reveal"><span class="sec-num">02</span><h2 id="wip-t" data-i18n="wip.t">В разработке</h2><p data-i18n="wip.p">Лаборатория. Часть материалов засекречена.</p></header>
+    <div class="grid wip-grid" id="wip-grid"></div>
+  </section>
+
+  <section class="section" id="community" aria-labelledby="com-t">
+    <header class="sec-head reveal"><span class="sec-num">03</span><h2 id="com-t" data-i18n="com.t">Сообщества</h2><p data-i18n="com.p">Не проекты — люди. Отдел сообществ.</p></header>
+    <div class="grid com-grid" id="com-grid"></div>
+  </section>
+
+  <section class="section" id="archive" aria-labelledby="arc-t">
+    <header class="sec-head reveal"><span class="sec-num">04</span><h2 id="arc-t" data-i18n="arc.t">Архив</h2><p data-i18n="arc.p">Проекты, которые остаются в памяти.</p></header>
+    <div class="grid" id="arc-grid"></div>
+  </section>
+
+  <section class="section support" aria-labelledby="sup-t">
+    <h2 id="sup-t" class="reveal" data-i18n="sup.t">Нравится то, что я делаю?</h2>
+    <p class="reveal" data-i18n="sup.p">Донатики донатики — каждый помогает котикам кликать, а боту качать.</p>
+    <a class="donate reveal" href="https://donatre.github.io/" target="_blank" rel="noopener"><span class="heart" aria-hidden="true">♥</span> <span data-i18n="donate">Поддержать</span></a>
+  </section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="foot-cols">
+    <section class="foot-block" aria-labelledby="con-t">
+      <h2 id="con-t" class="foot-title" data-i18n="contact.t">Связь</h2>
+      <ul class="socials">
+        <li><a class="ic-tg" href="https://t.me/Nomboerto" target="_blank" rel="noopener"><i class="ico tg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.6 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.2-8.3c.4-.4-.1-.6-.6-.2L6 13.6l-4.9-1.5c-1.1-.3-1.1-1 .2-1.6L20.5 3c.9-.3 1.7.2 1.4 1.3z"/></svg></i><span>@Nomboerto<small data-i18n="contact.tg">написать в Telegram</small></span></a></li>
+        <li><a class="ic-mail" href="mailto:NomberContact@proton.me"><i class="ico mail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2zm2 2v.5l8 5 8-5V7l-8 5z"/></svg></i><span>NomberContact@proton.me<small data-i18n="contact.mail">почта для связи</small></span></a></li>
+      </ul>
+    </section>
+    <section class="foot-block" aria-labelledby="soc-t">
+      <h2 id="soc-t" class="foot-title" data-i18n="soc.t">Соцсети</h2>
+      <ul class="socials">
+        <li class="wide"><a class="gh-big" href="https://github.com/NOMBER" target="_blank" rel="noopener"><i class="ico gh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg></i><span>GitHub<small>github.com/NOMBER · <b data-i18n="soc.gh">код и опенсорс</b></small></span></a></li>
+        <li class="wide"><a href="https://t.me/NomberLife" target="_blank" rel="noopener"><i class="ico tg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.6 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.2-8.3c.4-.4-.1-.6-.6-.2L6 13.6l-4.9-1.5c-1.1-.3-1.1-1 .2-1.6L20.5 3c.9-.3 1.7.2 1.4 1.3z"/></svg></i><span>NomberLife<small data-i18n="soc.life">личный блог · Telegram</small></span></a></li>
+        <li><a href="https://steamcommunity.com/id/NomberFax/" target="_blank" rel="noopener"><i class="ico img"><img src="assets/steam.png" alt="" width="28" height="28"></i><span>Steam<small data-i18n="soc.steam">профиль Steam</small></span></a></li>
+        <li><a href="https://kinorium.com/user/61414" target="_blank" rel="noopener"><i class="ico img"><img src="assets/kinorium.png" alt="" width="28" height="28"></i><span data-i18n-wrap><b data-i18n="soc.kino">Кинориум</b><small data-i18n="soc.kinosub">мои оценки фильмов</small></span></a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="aside"><span data-i18n="aside">Также:</span> <a href="https://nomberfolio.github.io/" target="_blank" rel="noopener" data-i18n="aside.link">амбассадорское портфолио</a></p>
+  <p class="hub"><span data-i18n="hub">Хаб всех проектов —</span> <a href="https://nomberprojects.github.io/">nomberprojects.github.io</a> · © <span id="y">2026</span> NOMBER</p>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/main.js"></script>
 </body>
 </html>
