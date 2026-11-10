@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru" data-page="blog">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev-блог — NOMBER Devlog · NomberProjects</title>
+<meta name="description" content="Лента канала NOMBER Devlog: обновления проектов, опенсорс, релизы и эксперименты.">
+<link rel="canonical" href="https://nomberprojects.github.io/blog.html">
+<meta name="theme-color" content="#05050a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NomberProjects">
+<meta property="og:title" content="Dev-блог — NOMBER Devlog · NomberProjects">
+<meta property="og:description" content="Журнал разработчика NOMBER. Посты из Telegram-канала @NomberDev.">
+<meta property="og:url" content="https://nomberprojects.github.io/blog.html">
+<meta property="og:image" content="https://nomberprojects.github.io/assets/og.jpg">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/downgrab-256.jpg">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/i18n.js"></script>
+</head>
+<body>
+<a class="skip" href="#feed" data-i18n="blog.skip">Перейти к ленте</a>
+<div class="bg" aria-hidden="true"><div class="bg-city" data-depth="6"></div><canvas id="fx"></canvas></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="index.html" aria-label="NomberProjects — наверх" data-i18n-attr="aria-label:a.top"><img src="assets/favicon.svg" alt="" width="28" height="28"><span>Nomber<b>Projects</b></span></a>
+  <nav aria-label="Разделы" data-i18n-attr="aria-label:a.sections">
+    <a href="index.html#projects" data-i18n="nav.projects">Проекты</a><a href="index.html#wip" data-i18n="nav.wip">В разработке</a><a href="index.html#community" data-i18n="nav.com">Сообщества</a><a href="index.html#archive" data-i18n="nav.arc">Архив</a><a href="index.html#contact" data-i18n="nav.contact">Связь</a>
+  </nav>
+  <a class="nav-blog on" href="blog.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.6 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.2-8.3c.4-.4-.1-.6-.6-.2L6 13.6l-4.9-1.5c-1.1-.3-1.1-1 .2-1.6L20.5 3c.9-.3 1.7.2 1.4 1.3z"/></svg><span data-i18n="nav.blog">Dev-блог</span></a>
+  <a class="nav-donate" href="https://donatre.github.io/" target="_blank" rel="noopener">♥ <span data-i18n="donate">Поддержать</span></a>
+  <div class="lang" role="group" aria-label="Язык сайта" data-i18n-attr="aria-label:a.lang"><button type="button" data-lang="ru">RU</button><i>|</i><button type="button" data-lang="en">EN</button></div>
+</header>
+
+<main>
+  <section class="blog-hero" aria-labelledby="blog-title">
+    <div class="blog-hero-card reveal" id="blog-hero">
+      <img class="blog-avatar" id="blog-avatar" src="data/media/avatar.jpg" alt="" width="148" height="148">
+      <div>
+        <p class="kicker" data-i18n="blog.kicker">// t.me/NomberDev — журнал разработчика</p>
+        <h1 id="blog-title">NOMBER Devlog</h1>
+        <p class="blog-handle" id="blog-handle"><a href="https://t.me/NomberDev" target="_blank" rel="noopener">@NomberDev</a></p>
+        <div class="blog-desc" id="blog-desc"></div>
+        <div class="blog-cta">
+          <a class="blog-open" href="https://t.me/NomberDev" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.6 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.2-8.3c.4-.4-.1-.6-.6-.2L6 13.6l-4.9-1.5c-1.1-.3-1.1-1 .2-1.6L20.5 3c.9-.3 1.7.2 1.4 1.3z"/></svg>
+            <span data-i18n="blog.open">Открыть канал</span>
+          </a>
+          <p class="blog-cta-note" data-i18n="blog.cta">Подписывайся, чтобы не пропустить обновления проектов.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="feed-wrap">
+    <header class="sec-head reveal">
+      <span class="sec-num">01</span>
+      <h2 data-i18n="blog.feed">Лента</h2>
+      <p class="feed-updated" id="feed-updated"></p>
+    </header>
+    <div class="feed" id="feed"></div>
+    <button type="button" class="feed-more" id="feed-more" hidden data-i18n="blog.more">Показать ещё</button>
+    <p class="feed-end" id="feed-end" hidden data-i18n="blog.end">Это все посты</p>
+    <p class="feed-empty" id="feed-empty" hidden data-i18n="blog.empty">Пока здесь нет постов. Загляни в канал.</p>
+    <p class="feed-error" id="feed-error" hidden><span data-i18n="blog.error">Не удалось загрузить ленту.</span> <button type="button" class="feed-retry" id="feed-retry" data-i18n="blog.retry">Попробовать снова</button></p>
+  </div>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="foot-cols">
+    <section class="foot-block" aria-labelledby="con-t">
+      <h2 id="con-t" class="foot-title" data-i18n="contact.t">Связь</h2>
+      <ul class="socials">
+        <li><a class="ic-tg" href="https://t.me/Nomboerto" target="_blank" rel="noopener"><i class="ico tg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.6 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.2-8.3c.4-.4-.1-.6-.6-.2L6 13.6l-4.9-1.5c-1.1-.3-1.1-1 .2-1.6L20.5 3c.9-.3 1.7.2 1.4 1.3z"/></svg></i><span>@Nomboerto<small data-i18n="contact.tg">написать в Telegram</small></span></a></li>
+        <li><a class="ic-mail copy-mail" href="mailto:NomberContact@proton.me" data-copy="NomberContact@proton.me"><i class="ico mail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2zm2 2v.5l8 5 8-5V7l-8 5z"/></svg></i><span>NomberContact@proton.me<small data-i18n="contact.mail">почта для связи</small></span></a></li>
+      </ul>
+    </section>
+    <section class="foot-block" aria-labelledby="soc-t">
+      <h2 id="soc-t" class="foot-title" data-i18n="soc.t">Соцсети</h2>
+      <ul class="socials">
+        <li class="wide"><a class="gh-big" href="https://github.com/NOMBER" target="_blank" rel="noopener"><i class="ico gh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg></i><span>GitHub<small>github.com/NOMBER · <b data-i18n="soc.gh">код и опенсорс</b></small></span></a></li>
+        <li class="wide"><a href="https://t.me/NomberLife" target="_blank" rel="noopener"><i class="ico tg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.6 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.2-8.3c.4-.4-.1-.6-.6-.2L6 13.6l-4.9-1.5c-1.1-.3-1.1-1 .2-1.6L20.5 3c.9-.3 1.7.2 1.4 1.3z"/></svg></i><span>NomberLife (Ru)<small data-i18n="soc.life">личный блог · Telegram</small></span></a></li>
+        <li><a href="https://steamcommunity.com/id/NomberFax/" target="_blank" rel="noopener"><i class="ico img"><img src="assets/steam.png" alt="" width="28" height="28"></i><span>Steam<small data-i18n="soc.steam">профиль Steam</small></span></a></li>
+        <li><a href="https://kinorium.com/user/61414" target="_blank" rel="noopener"><i class="ico img"><img src="assets/kinorium.png" alt="" width="28" height="28"></i><span data-i18n-wrap><b data-i18n="soc.kino">Кинориум</b><small data-i18n="soc.kinosub">мои оценки фильмов</small></span></a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="aside"><span data-i18n="aside">Также:</span> <a href="https://nomberfolio.github.io/" target="_blank" rel="noopener" data-i18n="aside.link">амбассадорское портфолио</a></p>
+  <p class="hub"><span data-i18n="hub">Хаб всех проектов —</span> <a href="https://nomberprojects.github.io/">nomberprojects.github.io</a> · © <span id="y">2026</span> NOMBER</p>
+</footer>
+
+<script src="assets/blog.js"></script>
+</body>
+</html>

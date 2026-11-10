@@ -1,0 +1,26 @@
+{
+  "updated": "2026-11-10T21:13:39Z",
+  "channel": {
+    "name": "NOMBER Devlog",
+    "username": "NomberDev",
+    "url": "https://t.me/NomberDev",
+    "description_html": "An independent developer's journal featuring updates on my projects, open-source tools, new releases, experiments, and everything happening behind the scenes.<br><br>Built with curiosity, creativity, and a little help from AI.",
+    "avatar": "data/media/avatar.jpg",
+    "subscribers": "9"
+  },
+  "posts": [
+    {
+      "id": 4,
+      "url": "https://t.me/NomberDev/4",
+      "date": "2026-11-10T21:07:04+00:00",
+      "views": "1",
+      "text_html": "<b>One of the first projects I want to introduce here is </b><a href=\"http://t.me/DownGrabBot\" target=\"_blank\" rel=\"noopener noreferrer\"><b>DownGrab</b></a><b>.</b><br><br>The idea behind it was simple: make downloading videos and audio as easy as sending a message on Telegram.<br><br>No need to search for third-party websites, install extra software, or deal with complicated interfaces.<br><br>Just send a link to <a href=\"https://t.me/DownGrabBot\" target=\"_blank\" rel=\"noopener noreferrer\">@DownGrabBot</a>, and the bot will process it and deliver the file directly to your chat.<br><br>A simple idea that grew into a much bigger project.<br><br>More about its development, features, and updates soon!<br><br><a href=\"https://nomberprojects.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">Nomber Projects</a> | <a href=\"https://donatre.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">Support</a> 😼",
+      "photos": [
+        "data/media/4-p0.jpg"
+      ],
+      "videos": [],
+      "document": "",
+      "type": "photo"
+    }
+  ]
+}

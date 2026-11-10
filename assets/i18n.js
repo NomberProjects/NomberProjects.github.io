@@ -7,7 +7,7 @@ window.I18N = {
     "meta.desc": "NomberProjects — хаб всех проектов NOMBER: DownGrab, KotoClicker, плагины для Obsidian, сообщество Критики Steam и проекты в разработке.",
     "og.desc": "Автор · Разработчик · Создатель экосистем. Хаб всех проектов NOMBER.",
     "skip": "Перейти к проектам", "a.top": "NomberProjects — наверх", "a.sections": "Разделы", "a.lang": "Язык сайта",
-    "nav.projects": "Проекты", "nav.wip": "В разработке", "nav.com": "Сообщества", "nav.arc": "Архив", "nav.contact": "Связь",
+    "nav.projects": "Проекты", "nav.wip": "В разработке", "nav.com": "Сообщества", "nav.arc": "Архив", "nav.contact": "Связь", "nav.blog": "Dev-блог", "nav.home": "Главная",
     "donate": "Поддержать",
     "hero.kicker": "// nomberprojects.github.io — хаб экосистемы",
     "hero.sub": "Автор · Разработчик · Создатель экосистем",
@@ -24,14 +24,32 @@ window.I18N = {
     "card.site": "сайт проекта", "secret.aria": "Засекреченный проект", "secret.grif": "Гриф: СС", "secret.stamp": "СЕКРЕТНО", "secret.denied": "ДОСТУП ЗАПРЕЩЁН", "secret.obj": "Объект №",
     "com.tgbadge": "Telegram-канал",
     "vault.t": "Хранилище запечатано", "vault.p": "Скоро здесь появятся архивные проекты — для памяти.",
-    "404.p": "Детектив обыскал весь город — такой страницы нет.", "404.a": "На главную"
+    "404.p": "Детектив обыскал весь город — такой страницы нет.", "404.a": "На главную",
+    "blog.meta.title": "Dev-блог — NOMBER Devlog · NomberProjects",
+    "blog.meta.desc": "Лента канала NOMBER Devlog: обновления проектов, опенсорс, релизы и эксперименты.",
+    "blog.og.desc": "Журнал разработчика NOMBER. Посты из Telegram-канала @NomberDev.",
+    "blog.skip": "Перейти к ленте",
+    "blog.kicker": "// t.me/NomberDev — журнал разработчика",
+    "blog.open": "Открыть канал",
+    "blog.cta": "Подписывайся, чтобы не пропустить обновления проектов.",
+    "blog.feed": "Лента",
+    "blog.more": "Показать ещё",
+    "blog.end": "Это все посты",
+    "blog.empty": "Пока здесь нет постов. Загляни в канал.",
+    "blog.error": "Не удалось загрузить ленту.",
+    "blog.retry": "Попробовать снова",
+    "blog.openpost": "Открыть в Telegram",
+    "blog.video": "Видео",
+    "blog.updated": "Обновлено",
+    "blog.subs": "подписчиков",
+    "blog.doc": "Файл"
   },
   en: {
     "meta.title": "NOMBER — NomberProjects · Author, developer, ecosystem builder",
     "meta.desc": "NomberProjects — the hub of all NOMBER projects: DownGrab, KotoClicker, Obsidian plugins, the Critics Steam community and projects in development.",
     "og.desc": "Author · Developer · Ecosystem builder. The hub of all NOMBER projects.",
     "skip": "Skip to projects", "a.top": "NomberProjects — back to top", "a.sections": "Sections", "a.lang": "Site language",
-    "nav.projects": "Projects", "nav.wip": "In development", "nav.com": "Communities", "nav.arc": "Archive", "nav.contact": "Contact",
+    "nav.projects": "Projects", "nav.wip": "In development", "nav.com": "Communities", "nav.arc": "Archive", "nav.contact": "Contact", "nav.blog": "Dev blog", "nav.home": "Home",
     "donate": "Support",
     "hero.kicker": "// nomberprojects.github.io — ecosystem hub",
     "hero.sub": "Author · Developer · Ecosystem builder",
@@ -48,7 +66,25 @@ window.I18N = {
     "card.site": "project website", "secret.aria": "Classified project", "secret.grif": "Top secret", "secret.stamp": "CLASSIFIED", "secret.denied": "ACCESS DENIED", "secret.obj": "Object #",
     "com.tgbadge": "Telegram channel",
     "vault.t": "The vault is sealed", "vault.p": "Archived projects will appear here soon — for the memories.",
-    "404.p": "The detective searched the whole city — this page doesn't exist.", "404.a": "Back home"
+    "404.p": "The detective searched the whole city — this page doesn't exist.", "404.a": "Back home",
+    "blog.meta.title": "Dev blog — NOMBER Devlog · NomberProjects",
+    "blog.meta.desc": "The NOMBER Devlog feed: project updates, open source, releases and experiments.",
+    "blog.og.desc": "NOMBER's developer journal. Posts from the @NomberDev Telegram channel.",
+    "blog.skip": "Skip to the feed",
+    "blog.kicker": "// t.me/NomberDev — developer journal",
+    "blog.open": "Open channel",
+    "blog.cta": "Subscribe so you don't miss project updates.",
+    "blog.feed": "Feed",
+    "blog.more": "Show more",
+    "blog.end": "That's all the posts",
+    "blog.empty": "No posts here yet. Check the channel.",
+    "blog.error": "Could not load the feed.",
+    "blog.retry": "Try again",
+    "blog.openpost": "Open in Telegram",
+    "blog.video": "Video",
+    "blog.updated": "Updated",
+    "blog.subs": "subscribers",
+    "blog.doc": "File"
   }
 };
 /* Определение языка: сохранённый выбор → языки браузера (ru/be/uk/kk → RU) → EN */
@@ -63,10 +99,15 @@ window.applyI18n = function (lang, root) {
   document.documentElement.lang = lang;
   root.querySelectorAll("[data-i18n]").forEach(el => { const v = d[el.dataset.i18n]; if (v != null) el.textContent = v; });
   root.querySelectorAll("[data-i18n-attr]").forEach(el => el.dataset.i18nAttr.split(";").forEach(p => { const [a, k] = p.split(":"); if (d[k] != null) el.setAttribute(a, d[k]); }));
-  if (d["meta.title"] && document.querySelector('meta[name="description"]')) {
-    document.title = d["meta.title"];
-    document.querySelector('meta[name="description"]').content = d["meta.desc"];
-    const og = document.querySelector('meta[property="og:description"]'); if (og) og.content = d["og.desc"];
+  const page = document.documentElement.dataset.page || "home";
+  const titleKey = page === "blog" ? "blog.meta.title" : "meta.title";
+  const descKey = page === "blog" ? "blog.meta.desc" : "meta.desc";
+  const ogKey = page === "blog" ? "blog.og.desc" : "og.desc";
+  if (d[titleKey] && document.querySelector('meta[name="description"]')) {
+    document.title = d[titleKey];
+    document.querySelector('meta[name="description"]').content = d[descKey] || d["meta.desc"];
+    const og = document.querySelector('meta[property="og:description"]'); if (og) og.content = d[ogKey] || d["og.desc"];
+    const ot = document.querySelector('meta[property="og:title"]'); if (ot) ot.content = d[titleKey];
     const ol = document.querySelector('meta[property="og:locale"]'); if (ol) ol.content = lang === "ru" ? "ru_RU" : "en_US";
   }
 };
