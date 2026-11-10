@@ -135,3 +135,17 @@
   };
   requestAnimationFrame(tick);
 })();
+
+/* copy email on click */
+(() => {
+  const toast = document.createElement("div"); toast.className = "copy-toast"; toast.setAttribute("role","status"); document.body.appendChild(toast);
+  let t;
+  const msg = () => (document.documentElement.lang || "ru").startsWith("ru") ? "Почта скопирована ✓" : "Email copied ✓";
+  const fallback = (v) => { const ta = document.createElement("textarea"); ta.value = v; ta.style.position="fixed"; ta.style.opacity="0"; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); } catch (e) {} ta.remove(); };
+  document.addEventListener("click", async (e) => {
+    const a = e.target.closest("[data-copy]"); if (!a) return;
+    e.preventDefault(); const v = a.dataset.copy;
+    try { await navigator.clipboard.writeText(v); } catch (err) { fallback(v); }
+    toast.textContent = msg(); toast.classList.add("show"); clearTimeout(t); t = setTimeout(() => toast.classList.remove("show"), 1800);
+  });
+})();

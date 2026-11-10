@@ -46,14 +46,14 @@ window.NOMBER_DATA = {
       title: "Obsidian Plugins",
       tagline: { ru: "Каталог плагинов для Obsidian", en: "Catalog of Obsidian plugins" },
       description: {
-        ru: "Сайт-каталог со всеми моими плагинами для Obsidian: описания, установка, обновления — в одном месте. Сайт скоро откроется, а пока — GitHub.",
-        en: "A catalog site with all my Obsidian plugins: descriptions, installation and updates in one place. The site opens soon — GitHub for now."
+        ru: "Сайт-каталог со всеми моими плагинами для Obsidian: описания, установка, обновления — в одном месте. Сайт уже работает.",
+        en: "A catalog site with all my Obsidian plugins: descriptions, installation and updates in one place. The site is live."
       },
-      status: { ru: "Скоро", en: "Soon" },
+      status: { ru: "Работает", en: "Live" },
       image: "assets/obsidian.svg",
-      url: "https://github.com/NOMBER",
+      url: "https://nomberobsidian.github.io/",
       accent: "#a77bff",
-      links: [ { label: "GitHub", url: "https://github.com/NOMBER", icon: "gh" } ]
+      links: [ { label: { ru: "Сайт", en: "Website" }, url: "https://nomberobsidian.github.io/", icon: "web" }, { label: "GitHub", url: "https://github.com/NOMBER", icon: "gh" } ]
     }
   ],
 
