@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11T08:18:39Z",
+  "updated": "2026-11-11T22:58:48Z",
   "channel": {
     "name": "NOMBER Devlog",
     "username": "NomberDev",
@@ -9,6 +9,19 @@
     "subscribers": "9"
   },
   "posts": [
+    {
+      "id": 5,
+      "url": "https://t.me/NomberDev/5",
+      "date": "2026-11-11T22:07:01+00:00",
+      "views": "1",
+      "text_html": "<b>Another project I want to introduce is </b><a href=\"https://kotoclick.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\"><b>KotoClicker</b></a><b>, an open-source autoclicker for Windows. </b><b>🐱</b><br><br>The idea was simple: create a convenient tool for automating repetitive mouse and keyboards actions, without unnecessary complexity.<br><br>But I also wanted to give it some personality. That's how a lazy ginger cat and its little mouse sidekick became the face of KotoClicker.<br><br>Underneath the cute appearance is a capable automation tool with automatic clicking, scrolling, drag &amp; drop, macro recording and playback, customizable hotkeys and more.<br><br>The project is fully offline and open-source under the GNU GPL v3 license. No telemetry, no unnecessary background processes, and your macros stay on your computer.<br><br>A small utility that grew into a project of its own.<br><br> 📱  <a href=\"https://github.com/NOMBER/KotoClicker\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a> | <a href=\"https://kotoclick.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">Website</a><br><br>More updates and experiments to come!<br><br><a href=\"https://nomberprojects.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">Nomber Projects</a> | <a href=\"https://donatre.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">Support</a> 😼🐭",
+      "photos": [
+        "data/media/5-p0.jpg"
+      ],
+      "videos": [],
+      "document": "",
+      "type": "photo"
+    },
     {
       "id": 4,
       "url": "https://t.me/NomberDev/4",
