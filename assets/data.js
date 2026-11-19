@@ -25,20 +25,20 @@ window.NOMBER_DATA = {
       ]
     },
     {
-      id: "kotoclicker",
-      title: "KotoClicker",
-      tagline: { ru: "Экосистема DownGrab · личная разработка", en: "DownGrab ecosystem · personal project" },
+      id: "nombersoftware",
+      title: "NomberSoftware",
+      tagline: { ru: "Каталог программ и инструментов", en: "Software and tools catalog" },
       description: {
-        ru: "КотоКлик — передовой в мире опенсорс автокликер для Windows, где котик кликает за тебя.",
-        en: "KotoClick — the world's most advanced open-source autoclicker for Windows, where a cat does the clicking for you."
+        ru: "Программы и инструменты NOMBER в одном месте. Уже внутри — KotoClicker, автокликер с котиком для Windows.",
+        en: "NOMBER's software and tools in one place. Featuring KotoClicker, an autoclicker with a cat for Windows."
       },
-      status: "Open Source",
-      image: "assets/kotoclicker.webp",
-      url: "https://kotoclick.github.io/",
-      accent: "#f5b82e",
+      status: { ru: "Работает", en: "Live" },
+      image: "assets/software.svg",
+      url: "https://nombersoftware.github.io/",
+      accent: "#65dbff",
       links: [
-        { label: { ru: "Сайт", en: "Website" }, url: "https://kotoclick.github.io/", icon: "web" },
-        { label: "GitHub", url: "https://github.com/NOMBER/KotoClicker", icon: "gh" }
+        { label: { ru: "Сайт", en: "Website" }, url: "https://nombersoftware.github.io/", icon: "web" },
+        { label: { ru: "Канал", en: "Channel" }, url: "https://t.me/NomberSoftware", icon: "tg" }
       ]
     },
     {

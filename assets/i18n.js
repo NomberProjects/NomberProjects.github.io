@@ -4,7 +4,7 @@
 window.I18N = {
   ru: {
     "meta.title": "NOMBER — NomberProjects · Автор, разработчик, создатель экосистем",
-    "meta.desc": "NomberProjects — хаб всех проектов NOMBER: DownGrab, KotoClicker, плагины для Obsidian, сообщество Критики Steam и проекты в разработке.",
+    "meta.desc": "NomberProjects — хаб всех проектов NOMBER: DownGrab, NomberSoftware, плагины для Obsidian, сообщество Критики Steam и проекты в разработке.",
     "og.desc": "Автор · Разработчик · Создатель экосистем. Хаб всех проектов NOMBER.",
     "skip": "Перейти к проектам", "a.top": "NomberProjects — наверх", "a.sections": "Разделы", "a.lang": "Язык сайта",
     "nav.projects": "Проекты", "nav.wip": "В разработке", "nav.com": "Сообщества", "nav.arc": "Архив", "nav.contact": "Связь", "nav.blog": "Dev-блог", "nav.home": "Главная",
@@ -46,7 +46,7 @@ window.I18N = {
   },
   en: {
     "meta.title": "NOMBER — NomberProjects · Author, developer, ecosystem builder",
-    "meta.desc": "NomberProjects — the hub of all NOMBER projects: DownGrab, KotoClicker, Obsidian plugins, the Critics Steam community and projects in development.",
+    "meta.desc": "NomberProjects — the hub of all NOMBER projects: DownGrab, NomberSoftware, Obsidian plugins, the Critics Steam community and projects in development.",
     "og.desc": "Author · Developer · Ecosystem builder. The hub of all NOMBER projects.",
     "skip": "Skip to projects", "a.top": "NomberProjects — back to top", "a.sections": "Sections", "a.lang": "Site language",
     "nav.projects": "Projects", "nav.wip": "In development", "nav.com": "Communities", "nav.arc": "Archive", "nav.contact": "Contact", "nav.blog": "Dev blog", "nav.home": "Home",
