@@ -72,13 +72,14 @@ window.NOMBER_DATA = {
       title: { ru: "Критики Steam", en: "Critics Steam" },
       tagline: { ru: "Пост-ироничное сообщество", en: "Post-ironic community" },
       description: {
-        ru: "Передовое по контенту пост-ироничное сообщество с мемами и всем про экосистему Steam. Сейчас — канал в Telegram, сайт в разработке.",
-        en: "A content-first post-ironic community with memes and everything about the Steam ecosystem. Currently a Telegram channel; the website is in development."
+        ru: "Передовое по контенту пост-ироничное сообщество с мемами и всем про экосистему Steam. Есть канал в Telegram и свой сайт.",
+        en: "A content-first post-ironic community with memes and everything about the Steam ecosystem. Has a Telegram channel and its own website."
       },
       badge: { ru: "CIS · на русском языке", en: "CIS · Russian-language" },
-      status: { ru: "Сайт в разработке", en: "Website in development" },
+      status: { ru: "Работает", en: "Live" },
       image: "assets/criticssteam.webp",
-      links: [ { label: { ru: "Канал", en: "Channel" }, url: "https://t.me/criticssteam", icon: "tg" } ]
+      url: "https://criticssteam.github.io/",
+      links: [ { label: { ru: "Сайт", en: "Website" }, url: "https://criticssteam.github.io/", icon: "web" }, { label: { ru: "Канал", en: "Channel" }, url: "https://t.me/criticssteam", icon: "tg" } ]
     }
   ],
 

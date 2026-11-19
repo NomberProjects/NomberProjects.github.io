@@ -49,7 +49,7 @@
           <span class="stamp">${esc(T("secret.stamp"))}</span></div></article>`).join("");
 
     $("#com-grid").innerHTML = (D.communities || []).map(c => `<article class="card community reveal" style="--acc:#66c0f4">
-        <div class="card-in"><div class="c-logo">${c.image ? `<img src="${esc(c.image)}" alt="${esc(tr(c.title))}" loading="lazy" width="88" height="88">` : "🎮"}</div><div>
+        <div class="card-in"><div class="c-logo">${c.image ? (c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener"><img src="${esc(c.image)}" alt="${esc(tr(c.title))}" loading="lazy" width="88" height="88"></a>` : `<img src="${esc(c.image)}" alt="${esc(tr(c.title))}" loading="lazy" width="88" height="88">`) : "🎮"}</div><div>
           <span class="status">${esc(tr(c.status))}</span>
           <h3 style="font-size:26px">${esc(tr(c.title))}</h3><p class="tag">${esc(tr(c.tagline))}</p>
           <span class="badge">${esc(tr(c.badge))}</span><span class="badge">${esc(T("com.tgbadge"))}</span>
