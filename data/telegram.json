@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T14:41:23Z",
+  "updated": "2026-11-19T23:45:36Z",
   "channel": {
     "name": "NOMBER Devlog",
     "username": "NomberDev",
@@ -10,10 +10,23 @@
   },
   "posts": [
     {
+      "id": 6,
+      "url": "https://t.me/NomberDev/6",
+      "date": "2026-11-19T19:28:01+00:00",
+      "views": "3",
+      "text_html": "🎬 <b>Another little milestone for my personal projects!</b><br><br>I've launched a dedicated <a href=\"https://nombersoftware.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">website</a> for <b>NomberSoftware</b>, where I'll be bringing together all my software projects.<br><br>And the second project is already in development: <b>NF-Tune</b>, an open-source Windows utility designed to make system cleanup and optimization as simple, efficient, and effective as possible.<br><br>The goal is simple: less bloat, better performance, and full control over your PC.<br><br>More updates coming soon!<br><br>▸ <a href=\"https://t.me/NomberSoftware\" target=\"_blank\" rel=\"noopener noreferrer\">@NomberSoftware</a> | <a href=\"https://nomberprojects.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">Nomber Projects</a> | <a href=\"https://donatre.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">Support</a>",
+      "photos": [
+        "data/media/6-p0.jpg"
+      ],
+      "videos": [],
+      "document": "",
+      "type": "photo"
+    },
+    {
       "id": 5,
       "url": "https://t.me/NomberDev/5",
       "date": "2026-11-11T22:07:01+00:00",
-      "views": "5",
+      "views": "8",
       "text_html": "<b>Another project I want to introduce is </b><a href=\"https://kotoclick.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\"><b>KotoClicker</b></a><b>, an open-source autoclicker for Windows. </b><b>🐱</b><br><br>The idea was simple: create a convenient tool for automating repetitive mouse and keyboards actions, without unnecessary complexity.<br><br>But I also wanted to give it some personality. That's how a lazy ginger cat and its little mouse sidekick became the face of KotoClicker.<br><br>Underneath the cute appearance is a capable automation tool with automatic clicking, scrolling, drag &amp; drop, macro recording and playback, customizable hotkeys and more.<br><br>The project is fully offline and open-source under the GNU GPL v3 license. No telemetry, no unnecessary background processes, and your macros stay on your computer.<br><br>A small utility that grew into a project of its own.<br><br> 📱  <a href=\"https://github.com/NOMBER/KotoClicker\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a> | <a href=\"https://kotoclick.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">Website</a><br><br>More updates and experiments to come!<br><br><a href=\"https://nomberprojects.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">Nomber Projects</a> | <a href=\"https://donatre.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">Support</a> 😼🐭",
       "photos": [
         "data/media/5-p0.jpg"
@@ -26,7 +39,7 @@
       "id": 4,
       "url": "https://t.me/NomberDev/4",
       "date": "2026-11-10T21:07:04+00:00",
-      "views": "4",
+      "views": "6",
       "text_html": "<b>One of the first projects I want to introduce here is </b><a href=\"http://t.me/DownGrabBot\" target=\"_blank\" rel=\"noopener noreferrer\"><b>DownGrab</b></a><b>.</b><br><br>The idea behind it was simple: make downloading videos and audio as easy as sending a message on Telegram.<br><br>No need to search for third-party websites, install extra software, or deal with complicated interfaces.<br><br>Just send a link to <a href=\"https://t.me/DownGrabBot\" target=\"_blank\" rel=\"noopener noreferrer\">@DownGrabBot</a>, and the bot will process it and deliver the file directly to your chat.<br><br>A simple idea that grew into a much bigger project.<br><br>More about its development, features, and updates soon!<br><br><a href=\"https://nomberprojects.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">Nomber Projects</a> | <a href=\"https://donatre.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">Support</a> 😼",
       "photos": [
         "data/media/4-p0.jpg"
