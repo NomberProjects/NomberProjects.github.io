@@ -53,7 +53,7 @@ window.NOMBER_DATA = {
       image: "assets/obsidian.svg",
       url: "https://nomberobsidian.github.io/",
       accent: "#a77bff",
-      links: [ { label: { ru: "Сайт", en: "Website" }, url: "https://nomberobsidian.github.io/", icon: "web" }, { label: "GitHub", url: "https://github.com/NOMBER", icon: "gh" } ]
+      links: [ { label: { ru: "Сайт", en: "Website" }, url: "https://nomberobsidian.github.io/", icon: "web" }, { label: { ru: "Канал", en: "Channel" }, url: "https://t.me/NomberObsidian", icon: "tg" }, { label: "GitHub", url: "https://github.com/NOMBER", icon: "gh" } ]
     }
   ],
 
